@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Buat Laporan - FindIt Campus</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F3F4F6;
+      color: #1F2937;
+      -webkit-font-smoothing: antialiased;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex justify-center min-h-screen text-gray-800">
+<!-- Mobile Container (Max 430px for standard mobile preview) -->
+<div class="w-full max-w-[430px] bg-white min-h-screen flex flex-col shadow-xl relative pb-10">
+<!-- Top App Bar / Header -->
+<header class="sticky top-0 z-30 bg-[#1E3A8A] text-white px-4 py-3.5 flex items-center justify-between shadow-md">
+<div class="flex items-center gap-3">
+<button aria-label="Kembali" class="w-9 h-9 rounded-lg flex items-center justify-center hover:bg-white/10 active:scale-95 transition">
+<i class="fa-solid fa-arrow-left text-lg"></i>
+</button>
+<div>
+<h1 class="text-lg font-bold leading-tight">Buat Laporan</h1>
+<p class="text-[11px] text-blue-200">Formulir Pelaporan Barang Kampus</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-blue-900/60 px-2.5 py-1 rounded-full border border-blue-400/30">
+<i class="fa-solid fa-wand-magic-sparkles text-amber-300 text-xs animate-pulse"></i>
+<span class="text-[11px] font-medium text-amber-200">AI Gemini Aktif</span>
+</div>
+</header>
+<!-- Main Content Form -->
+<main class="flex-1 px-4 py-4 space-y-5">
+<!-- Section: Foto Barang & Upload -->
+<section class="bg-gray-50 border border-gray-200 rounded-lg p-3.5 space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<label class="text-sm font-semibold text-gray-900 flex items-center gap-1.5">
+<span>Foto Barang</span>
+<span class="text-red-500 font-bold">*</span>
+</label>
+<p class="text-xs text-gray-500 mt-0.5">Unggah 1-3 foto (JPG/PNG, maks 2 MB)</p>
+</div>
+<span class="text-xs font-semibold px-2 py-0.5 bg-blue-100 text-[#1E3A8A] rounded-md border border-blue-200">
+            2 / 3 Foto
+          </span>
+</div>
+<!-- Thumbnail Gallery + Upload Slot -->
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Thumbnail 1 -->
+<div class="relative group aspect-square rounded-lg overflow-hidden border-2 border-emerald-500 bg-gray-100 shadow-sm">
+<img alt="Foto barang 1" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<div class="absolute top-1 left-1 bg-emerald-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow">
+              Foto Utama
+            </div>
+<button class="absolute top-1 right-1 w-5 h-5 bg-black/60 hover:bg-red-600 text-white rounded-full flex items-center justify-center text-[10px] transition shadow" title="Hapus foto">
+<i class="fa-solid fa-xmark"></i>
+</button>
+<div class="absolute bottom-0 inset-x-0 bg-black/50 backdrop-blur-[2px] text-[10px] text-white py-0.5 text-center font-medium">
+              1.2 MB
+            </div>
+</div>
+<!-- Thumbnail 2 -->
+<div class="relative group aspect-square rounded-lg overflow-hidden border border-gray-200 bg-gray-100 shadow-sm">
+<img alt="Foto barang 2" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<button class="absolute top-1 right-1 w-5 h-5 bg-black/60 hover:bg-red-600 text-white rounded-full flex items-center justify-center text-[10px] transition shadow" title="Hapus foto">
+<i class="fa-solid fa-xmark"></i>
+</button>
+<div class="absolute bottom-0 inset-x-0 bg-black/50 backdrop-blur-[2px] text-[10px] text-white py-0.5 text-center font-medium">
+              840 KB
+            </div>
+</div>
+<!-- Slot Tambah Foto ke-3 -->
+<button class="aspect-square border-2 border-dashed border-gray-300 hover:border-[#1E3A8A] hover:bg-blue-50/50 rounded-lg flex flex-col items-center justify-center text-gray-500 hover:text-[#1E3A8A] transition group bg-white" type="button">
+<div class="w-8 h-8 rounded-full bg-gray-100 group-hover:bg-blue-100 flex items-center justify-center mb-1 text-gray-500 group-hover:text-[#1E3A8A] transition">
+<i class="fa-solid fa-plus text-sm"></i>
+</div>
+<span class="text-[11px] font-medium">+ Tambah</span>
+<span class="text-[9px] text-gray-400">1 slot tersisa</span>
+</button>
+</div>
+<!-- Status Deteksi AI Row -->
+<div class="bg-blue-50/80 border border-blue-200/90 rounded-lg px-3 py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="relative w-4 h-4 flex items-center justify-center">
+<i class="fa-solid fa-circle-notch fa-spin text-[#1E3A8A] text-sm"></i>
+</div>
+<span class="text-xs font-semibold text-[#1E3A8A] tracking-tight">Mendeteksi barang dengan AI...</span>
+</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded-full border border-emerald-300">
+<i class="fa-solid fa-check text-[10px]"></i> 3 Kolom Terisi
+          </span>
+</div>
+<!-- Banner Info Privasi (Sesuai Aturan B9) -->
+<div class="bg-amber-50 border-l-4 border-amber-400 p-2.5 rounded-r-lg flex items-start gap-2 text-amber-800 text-xs">
+<i class="fa-solid fa-triangle-exclamation text-amber-500 mt-0.5 flex-shrink-0"></i>
+<p class="leading-relaxed">
+<strong class="font-semibold">Perlindungan Data (B9):</strong> Pastikan foto tidak menampilkan data sensitif (NIK/KTM/Nomor Kartu Bank) secara terbuka sebelum dikirim.
+          </p>
+</div>
+</section>
+<!-- Section: Jenis Laporan (Segmented Toggle) -->
+<section class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-gray-700">
+          Jenis Laporan <span class="text-red-500">*</span>
+</label>
+<div class="grid grid-cols-2 gap-2 p-1 bg-gray-100 rounded-lg border border-gray-200">
+<!-- Toggle Hilang -->
+<label class="cursor-pointer">
+<input class="peer sr-only" name="report_type" type="radio" value="hilang"/>
+<div class="py-2.5 px-3 rounded-md text-center font-medium text-sm text-gray-600 peer-checked:bg-white peer-checked:text-[#DC2626] peer-checked:shadow-sm peer-checked:border peer-checked:border-red-200 flex items-center justify-center gap-2 transition hover:bg-gray-50">
+<i class="fa-solid fa-circle-exclamation text-sm text-gray-400 peer-checked:text-[#DC2626]"></i>
+<span class="font-semibold">Hilang</span>
+</div>
+</label>
+<!-- Toggle Ditemukan (Active default) -->
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="report_type" type="radio" value="ditemukan"/>
+<div class="py-2.5 px-3 rounded-md text-center font-medium text-sm text-[#16A34A] bg-white shadow-sm border border-emerald-200 peer-checked:bg-white peer-checked:text-[#16A34A] flex items-center justify-center gap-2 transition">
+<i class="fa-solid fa-circle-check text-sm text-[#16A34A]"></i>
+<span class="font-bold">Ditemukan</span>
+</div>
+</label>
+</div>
+</section>
+<!-- Section: Informasi Barang -->
+<section class="space-y-3.5">
+<!-- Input Nama Barang -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="text-xs font-semibold text-gray-700" for="nama_barang">
+              Nama Barang <span class="text-red-500">*</span>
+</label>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-800 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">
+<i class="fa-solid fa-sparkles text-amber-500 text-[10px]"></i>
+<span>Terisi otomatis oleh AI</span>
+</span>
+</div>
+<div class="relative">
+<input class="w-full px-3.5 py-2.5 bg-blue-50/20 border border-blue-300 focus:border-[#1E3A8A] focus:ring-2 focus:ring-blue-100 rounded-lg text-sm font-medium text-gray-900 transition" id="nama_barang" type="text" value="Tumbler Corkcicle Canteen Sage Green 16oz"/>
+<span class="absolute right-3 top-2.5 text-xs text-gray-400">
+<i class="fa-solid fa-pen text-gray-400 text-xs"></i>
+</span>
+</div>
+</div>
+<!-- Dropdown Kategori -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="text-xs font-semibold text-gray-700" for="kategori">
+              Kategori Barang <span class="text-red-500">*</span>
+</label>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-800 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">
+<i class="fa-solid fa-sparkles text-amber-500 text-[10px]"></i>
+<span>Terisi otomatis oleh AI</span>
+</span>
+</div>
+<div class="relative">
+<select class="w-full px-3.5 py-2.5 bg-blue-50/20 border border-blue-300 focus:border-[#1E3A8A] focus:ring-2 focus:ring-blue-100 rounded-lg text-sm font-medium text-gray-900 appearance-none transition" id="kategori">
+<option selected="" value="barang_pribadi">Barang Pribadi (Botol Minum, Jaket, Payung)</option>
+<option value="elektronik">Elektronik (Laptop, HP, Charger, Kalkulator)</option>
+<option value="identitas">Kartu &amp; Dompet (KTM, KTP, Dompet)</option>
+<option value="kunci">Kunci &amp; Kendaraan (Kunci Motor, Lanyard)</option>
+<option value="buku">Buku &amp; Alat Tulis</option>
+<option value="lainnya">Lain-lain</option>
+</select>
+<div class="pointer-events-none absolute right-3.5 top-3 text-gray-500 text-xs">
+<i class="fa-solid fa-chevron-down"></i>
+</div>
+</div>
+</div>
+<!-- Textarea Deskripsi -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="text-xs font-semibold text-gray-700" for="deskripsi">
+              Deskripsi Barang <span class="text-red-500">*</span>
+</label>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-800 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full">
+<i class="fa-solid fa-sparkles text-amber-500 text-[10px]"></i>
+<span>Terisi otomatis oleh AI</span>
+</span>
+</div>
+<textarea class="w-full px-3.5 py-2.5 bg-blue-50/20 border border-blue-300 focus:border-[#1E3A8A] focus:ring-2 focus:ring-blue-100 rounded-lg text-sm text-gray-900 leading-relaxed transition" id="deskripsi" rows="3">Warna hijau sage doff, terdapat stiker siluet gunung kecil di bagian bawah, tutup warna perak masih sangat mulus tanpa lecet.</textarea>
+<p class="text-[11px] text-gray-500 text-right">Dapat disesuaikan secara manual</p>
+</div>
+</section>
+<!-- Section: Waktu & Lokasi Kejadian -->
+<section class="space-y-3.5 pt-2 border-t border-gray-200">
+<!-- Waktu Kejadian (Date & Time Picker) -->
+<div class="space-y-1">
+<label class="text-xs font-semibold text-gray-700 flex items-center justify-between" for="waktu_kejadian">
+<span>Waktu Kejadian <span class="text-red-500">*</span></span>
+<span class="text-[11px] text-gray-500 font-normal">Maks. 30 hari ke belakang (B3)</span>
+</label>
+<div class="relative">
+<input class="w-full px-3.5 py-2.5 border border-gray-300 focus:border-[#1E3A8A] focus:ring-2 focus:ring-blue-100 rounded-lg text-sm text-gray-800 font-medium" id="waktu_kejadian" type="datetime-local" value="2025-10-25T14:30"/>
+<div class="pointer-events-none absolute right-3.5 top-3 text-gray-400 text-sm">
+<i class="fa-solid fa-calendar-day"></i>
+</div>
+</div>
+</div>
+<!-- Dropdown Gedung Kampus -->
+<div class="space-y-1">
+<label class="text-xs font-semibold text-gray-700" for="gedung">
+            Gedung / Kawasan Kampus <span class="text-red-500">*</span>
+</label>
+<div class="relative">
+<select class="w-full px-3.5 py-2.5 border border-gray-300 focus:border-[#1E3A8A] focus:ring-2 focus:ring-blue-100 rounded-lg text-sm font-medium text-gray-800 appearance-none" id="gedung">
+<option selected="" value="open_library">Open Library Telkom University</option>
+<option value="gku">Gedung Kuliah Umum (GKU)</option>
+<option value="tult">Telkom University Landmark Tower (TULT)</option>
+<option value="tokong_nanas">Gedung Tokong Nanas (Gedung 10)</option>
+<option value="cacuk">Gedung Cacuk Sudarijanto (FTE)</option>
+<option value="masjid">Masjid Syamsul 'Ulum</option>
+<option value="kantin">Kantin Terpadu &amp; Student Center</option>
+<option value="asrama">Kawasan Asrama Kampus</option>
+</select>
+<div class="pointer-events-none absolute right-3.5 top-3 text-gray-500 text-xs">
+<i class="fa-solid fa-chevron-down"></i>
+</div>
+</div>
+</div>
+<!-- Input Detail Lokasi -->
+<div class="space-y-1">
+<label class="text-xs font-semibold text-gray-700" for="detail_lokasi">
+            Detail Lokasi Spesifik <span class="text-red-500">*</span>
+</label>
+<div class="relative">
+<input class="w-full px-3.5 py-2.5 border border-gray-300 focus:border-[#1E3A8A] focus:ring-2 focus:ring-blue-100 rounded-lg text-sm text-gray-900 font-medium" id="detail_lokasi" placeholder="cth. Meja Diskusi 04 Lantai 2, dekat rak buku sains" type="text" value="Lantai 2, Meja Diskusi area tenang dekat jendela barat"/>
+<span class="absolute right-3.5 top-3 text-gray-400 text-xs">
+<i class="fa-solid fa-location-dot text-blue-800"></i>
+</span>
+</div>
+</div>
+<!-- Peta Kecil dengan Penanda Draggable -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="text-xs font-semibold text-gray-700">Titik Koordinat pada Peta</label>
+<span class="text-[11px] font-medium text-emerald-700 flex items-center gap-1">
+<i class="fa-solid fa-circle-dot text-[9px]"></i> Lat: -6.9748, Lng: 107.6302
+            </span>
+</div>
+<!-- Simulated Leaflet Map with draggable pin -->
+<div class="relative h-44 rounded-lg overflow-hidden border border-gray-300 shadow-inner group">
+<!-- Simulated Map Background Texture -->
+<div class="absolute inset-0 bg-[#E5ECE9]">
+<!-- Campus Map Streets & Green Area SVG/CSS -->
+<svg class="w-full h-full object-cover opacity-85" preserveaspectratio="none" viewbox="0 0 400 200">
+<!-- Roads -->
+<rect fill="#f1f5f9" height="200" width="400"></rect>
+<path d="M-10,40 Q150,60 410,20" fill="none" stroke="#cbd5e1" stroke-width="18"></path>
+<path d="M120,-10 L160,210" fill="none" stroke="#cbd5e1" stroke-width="22"></path>
+<path d="M-20,150 L420,130" fill="none" stroke="#e2e8f0" stroke-width="12"></path>
+<path d="M260,-20 L240,220" fill="none" stroke="#cbd5e1" stroke-width="16"></path>
+<!-- Campus Buildings -->
+<rect fill="#dbeafe" height="50" rx="4" stroke="#bfdbfe" stroke-width="2" width="70" x="30" y="70"></rect>
+<text fill="#1e3a8a" font-size="8" font-weight="bold" text-anchor="middle" x="65" y="98">Gedung GKU</text>
+<rect fill="#dcfce7" height="60" rx="4" stroke="#bbf7d0" stroke-width="2" width="90" x="180" y="60"></rect>
+<text fill="#166534" font-size="8" font-weight="bold" text-anchor="middle" x="225" y="95">Open Library Tel-U</text>
+<rect fill="#fee2e2" height="50" rx="4" stroke="#fecaca" stroke-width="2" width="60" x="290" y="80"></rect>
+<text fill="#991b1b" font-size="8" font-weight="bold" text-anchor="middle" x="320" y="108">TULT</text>
+<!-- Lake / Park Area -->
+<path d="M30,140 Q70,130 90,160 Q80,190 40,185 Z" fill="#bae6fd" opacity="0.7"></path>
+</svg>
+</div>
+<!-- Draggable Marker Pin in Center -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="relative flex flex-col items-center -translate-y-4">
+<!-- Tooltip Label di atas pin -->
+<div class="bg-gray-900/90 backdrop-blur-sm text-white text-[11px] font-medium px-2.5 py-1 rounded-md shadow-lg mb-1 flex items-center gap-1.5 whitespace-nowrap border border-gray-700 animate-bounce">
+<i class="fa-solid fa-arrows-up-down-left-right text-xs text-amber-300"></i>
+<span>Titik Penemuan</span>
+</div>
+<!-- Marker SVG Pin -->
+<div class="w-10 h-10 flex items-center justify-center filter drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)]">
+<i class="fa-solid fa-location-dot text-4xl text-[#16A34A]"></i>
+<span class="absolute w-3.5 h-3.5 bg-white rounded-full top-[11px]"></span>
+</div>
+<!-- Pin Base Shadow -->
+<div class="w-3.5 h-1.5 bg-black/30 rounded-full blur-[1px] -mt-1"></div>
+</div>
+</div>
+<!-- Hint Badge Draggable di Bawah Peta -->
+<div class="absolute bottom-2 inset-x-2 bg-white/95 backdrop-blur-sm px-2.5 py-1.5 rounded-md border border-gray-200/80 flex items-center justify-between text-xs text-gray-700 shadow-sm">
+<span class="flex items-center gap-1.5 font-medium text-gray-800">
+<i class="fa-solid fa-hand-pointer text-[#1E3A8A] text-xs"></i>
+<span>Geser penanda ke titik yang tepat</span>
+</span>
+<button class="text-[11px] font-semibold text-[#1E3A8A] hover:underline flex items-center gap-1" type="button">
+<i class="fa-solid fa-crosshairs text-[10px]"></i> Lokasi Saya
+              </button>
+</div>
+<!-- Map Zoom Buttons -->
+<div class="absolute top-2 right-2 flex flex-col gap-1">
+<button class="w-7 h-7 bg-white rounded shadow text-gray-700 flex items-center justify-center text-xs font-bold hover:bg-gray-50 border border-gray-200" type="button">+</button>
+<button class="w-7 h-7 bg-white rounded shadow text-gray-700 flex items-center justify-center text-xs font-bold hover:bg-gray-50 border border-gray-200" type="button">-</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Buttons: Kirim & Batal -->
+<section class="pt-3 space-y-2.5">
+<!-- Tombol Kirim Laporan Utama (Oranye #F97316) -->
+<button class="w-full py-3.5 px-4 bg-[#F97316] hover:bg-[#EA580C] active:scale-[0.99] text-white font-bold text-base rounded-lg shadow-md shadow-orange-500/20 flex items-center justify-center gap-2 transition" type="button">
+<i class="fa-solid fa-paper-plane text-sm"></i>
+<span>Kirim Laporan</span>
+</button>
+<!-- Tombol Batal (Outline #1E3A8A) -->
+<button class="w-full py-3 px-4 bg-transparent hover:bg-blue-50/50 active:scale-[0.99] text-[#1E3A8A] border-2 border-[#1E3A8A] font-semibold text-sm rounded-lg flex items-center justify-center gap-1.5 transition" type="button">
+<i class="fa-solid fa-xmark text-sm"></i>
+<span>Batal</span>
+</button>
+<p class="text-center text-[11px] text-gray-500 pt-1">
+          Laporan akan langsung berstatus <strong class="text-emerald-700 font-semibold">Aktif</strong> dan muncul pada Peta &amp; Beranda kampus.
+        </p>
+</section>
+</main>
+</div>
+</body>
+</html>

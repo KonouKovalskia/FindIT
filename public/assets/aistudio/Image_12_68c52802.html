@@ -1,0 +1,423 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#9d4300", "on-secondary-fixed-variant": "#783200", "primary-fixed": "#dce1ff", "on-background": "#151c27", "on-secondary-fixed": "#341100", "tertiary-fixed": "#7ffc97", "tertiary": "#003211", "on-surface-variant": "#444651", "primary-container": "#1e3a8a", "error-container": "#ffdad6", "secondary-fixed": "#ffdbca", "surface-tint": "#4059aa", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "outline": "#757682", "surface-container-highest": "#dce2f3", "surface-variant": "#dce2f3", "on-tertiary-fixed": "#002109", "inverse-primary": "#b6c4ff", "on-tertiary-fixed-variant": "#005320", "tertiary-fixed-dim": "#62df7d", "outline-variant": "#c5c5d3", "secondary-fixed-dim": "#ffb690", "on-error-container": "#93000a", "inverse-surface": "#2a313d", "on-primary": "#ffffff", "on-secondary-container": "#5c2400", "secondary-container": "#fd761a", "surface-container": "#e7eefe", "primary-fixed-dim": "#b6c4ff", "surface-dim": "#d3daea", "error": "#ba1a1a", "tertiary-container": "#004b1d", "surface-container-high": "#e2e8f8", "surface-container-low": "#f0f3ff", "on-surface": "#151c27", "surface": "#f9f9ff", "on-secondary": "#ffffff", "inverse-on-surface": "#ebf1ff", "background": "#f9f9ff", "on-tertiary-container": "#44c365", "on-primary-fixed-variant": "#264191", "surface-bright": "#f9f9ff", "on-tertiary": "#ffffff", "primary": "#00236f", "on-primary-fixed": "#00164e", "on-primary-container": "#90a8ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "1rem", "space-sm": "0.5rem", "margin": "2rem", "margin-mobile": "1rem", "space-xl": "2rem", "gutter": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "space-lg": "1.5rem" }, fontFamily: { "headline-md": ["Inter"], "display": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"], "label-lg": ["Inter"], "display-mobile": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "body-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"] }, fontSize: { "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "600"}], "display": ["36px", {"lineHeight": "44px", "fontWeight": "700"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-lg": ["30px", {"lineHeight": "38px", "fontWeight": "700"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "display-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}], "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}] } } } }</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Kembali" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface select-none truncate">Detail Laporan</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Bagikan Laporan" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface pb-safe min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Toast Notifikasi Ringan -->
+<div class="fixed top-20 left-4 right-4 z-50 transform -translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-between p-3.5 bg-inverse-surface text-inverse-on-surface rounded-lg shadow-xl" id="toast-notification">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-text">Tautan berhasil disalin ke papan klip!</span>
+</div>
+<span class="material-symbols-outlined text-[18px] opacity-70">close</span>
+</div>
+<!-- Galeri Foto Carousel -->
+<div class="relative w-full px-gutter-mobile pt-space-xs">
+<div class="relative w-full overflow-hidden rounded-lg bg-surface-container-high shadow-sm aspect-[4/3]">
+<div class="flex w-full h-full transition-transform duration-500 ease-out" id="carousel-track">
+<!-- Foto 1 (Foto Utama) -->
+<div class="relative w-full h-full shrink-0">
+<img class="w-full h-full object-cover" data-alt="A modern sage green matte Corkcicle tumbler bottle standing on a polished wooden library desk with bright daylight from campus windows at Telkom University, soft background blur of bookshelves, professional product photography tone with navy and natural tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEYlPIoms-zO9wQRR1eSG5EX4aeWFrjpjSaUt5UBdlYtjPiWbos69Nhb8IZ7chWAnOm4WwcFJrRPpbpffgOysqUaPhBYU1xF0E3TErH9dUXHbi3yl0ddMpKyfWjZcB3ft8qEsGrOy19Ibf84KXK5--5bA6YfTaVJEU_dUJc-t4wozhoRknVnlWlLAVIykYLNkAqgewLQptbtmzhRAUF3mMU7ILZSLwHjzb-2Ozr6s">
+</div>
+<!-- Foto 2 (Detail Tutup & Stiker) -->
+<div class="relative w-full h-full shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close-up macro shot of a sage green metal insulated drink container showing a shiny silver leak-proof lid and a small mountain silhouette vinyl decal sticker on its lower surface, bright indoor study desk lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2MrxklblX97lU9f3pUdjroluPMBNuvxkBl6aZFRzRnm9UEhI3xr80xJ2C_OY3qkix27OeIRH3Bw283REQ6UXNrDPbkwuBYejy7MWdkGc67sGEJr3bQVmQ73ybvyTBT1xOTLCmT-WcK__Cj_7cqvJ_Ci9xUEQc_38NsJitKdZKsSSGcQNakVGNnWSlb-gPTEZeQxuvOy5lohihtst2d8c8n-o_qjbpkfjsWf1mN8A">
+</div>
+<!-- Foto 3 (Suasana Meja Penemuan) -->
+<div class="relative w-full h-full shrink-0">
+<img class="w-full h-full object-cover" data-alt="Wide shot of Telkom University Open Library second floor reading area with a lone green bottle resting on a sleek white communal study table near expansive glass windows overlooking campus trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2CHdyctOy1rTnV87iit9XOZ8IBZlm7nQ0iDHb-mdmdeZ5LXC0S330F58Cay6QjkfIwBikrSCRgv-vBJ_OteBmbfNzVhLICVUddU3R6-AA0Rg5Bt8yFx2RvJ4eN66Rk2r2MZZ5mFR6HnXJSU9w2tKwsN23Rxg6xBza1aI5iE1KbyZrY5EQXdIgBk70jnpmUKXa2mhaaa0ooPkcEhjl6C54hvyFBGfn8t6vUa3eiC4">
+</div>
+</div>
+<!-- Counter Badge di sudut kanan atas -->
+<div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">photo_camera</span>
+<span id="carousel-counter" class="">1 / 3</span>
+</div>
+<!-- Carousel Navigasi Panah Cepat -->
+<button aria-label="Foto Sebelumnya" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-primary flex items-center justify-center shadow-sm hover:bg-surface-container-lowest" onclick="moveCarousel(-1)" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button aria-label="Foto Berikutnya" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-primary flex items-center justify-center shadow-sm hover:bg-surface-container-lowest" onclick="moveCarousel(1)" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<!-- Pagination Dots -->
+<div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-2 py-1 rounded-full bg-inverse-surface/40 backdrop-blur-sm">
+<span class="carousel-dot w-2 h-2 rounded-full bg-primary-container transition-all"></span>
+<span class="carousel-dot w-2 h-2 rounded-full bg-surface-container-highest opacity-70 transition-all"></span>
+<span class="carousel-dot w-2 h-2 rounded-full bg-surface-container-highest opacity-70 transition-all"></span>
+</div>
+</div>
+</div>
+<!-- Identifikasi, Status, dan Nomor Laporan -->
+<div class="px-gutter-mobile pt-space-md flex flex-wrap items-center gap-space-xs">
+<!-- Badge Jenis: Ditemukan -->
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="">Ditemukan</span>
+</div>
+<!-- Badge Status: Aktif -->
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="">Laporan Aktif</span>
+</div>
+<!-- Chip ID Laporan -->
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm ml-auto">
+<span class="material-symbols-outlined text-[14px]">tag</span>
+<span class="tracking-wide">#LAP-20251025-042</span>
+</div>
+</div>
+<!-- Judul Barang, Badge Validasi, & Deskripsi -->
+<div class="px-gutter-mobile pt-space-sm pb-space-xs">
+<div class="flex items-center gap-1.5 text-primary-container mb-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">Terverifikasi oleh Sistem Kampus</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary leading-tight">Tumbler Corkcicle Sage Green 16oz</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+      Warna hijau sage doff, terdapat stiker siluet gunung kecil di bagian bawah, tutup warna perak masih sangat mulus tanpa lecet. Ditemukan tertinggal di atas meja baca lantai 2 dekat jendela barat.
+    </p>
+</div>
+<!-- Tombol Aksi Cepat Bagikan (Menu Terbuka/Floating Strip) -->
+<div class="px-gutter-mobile py-space-xs">
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">share</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Bantu Pemilik Menemukan:</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary hover:bg-surface-container shadow-sm font-label-sm text-label-sm flex items-center gap-1" onclick="copyShareLink()" type="button">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span class="">Salin Tautan</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary hover:bg-primary-container shadow-sm font-label-sm text-label-sm flex items-center gap-1" onclick="openShareModal()" type="button">
+<span class="material-symbols-outlined text-[14px]">qr_code_2</span>
+<span class="">Poster &amp; QR</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Rincian Informasi (Cards/Rows) -->
+<div class="px-gutter-mobile pt-space-sm flex flex-col gap-2.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Rincian Penemuan</h3>
+<!-- Kategori -->
+<div class="bg-surface-container-lowest rounded-lg p-3.5 shadow-sm flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">category</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Kategori Barang</span>
+<span class="block font-label-lg text-label-lg text-on-surface font-semibold truncate">Barang Pribadi (Botol Minum, Jaket, Payung)</span>
+</div>
+</div>
+<!-- Gedung & Lokasi -->
+<div class="bg-surface-container-lowest rounded-lg p-3.5 shadow-sm flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">apartment</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Gedung Kampus</span>
+<span class="block font-label-lg text-label-lg text-on-surface font-semibold">Open Library Telkom University</span>
+</div>
+</div>
+<!-- Detail Lokasi Spesifik -->
+<div class="bg-surface-container-lowest rounded-lg p-3.5 shadow-sm flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">pin_drop</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Detail Posisi Meja</span>
+<span class="block font-body-md text-body-md text-on-surface">Lantai 2, Meja Diskusi area tenang dekat jendela barat</span>
+</div>
+</div>
+<!-- Waktu Kejadian -->
+<div class="bg-surface-container-lowest rounded-lg p-3.5 shadow-sm flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">event_available</span>
+</div>
+<div class="min-w-0 flex-1">
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Waktu Ditemukan</span>
+<span class="block font-label-lg text-label-lg text-on-surface font-semibold">Jumat, 24 Okt 2025, 14:00 WIB</span>
+<span class="block font-body-sm text-body-sm text-outline mt-0.5">Dilaporkan 35 menit setelah ditemukan</span>
+</div>
+</div>
+</div>
+<!-- Mini Map Penemuan -->
+<div class="px-gutter-mobile pt-space-md">
+<div class="bg-surface-container-lowest rounded-lg p-3.5 shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Peta Lokasi Temuan</h4>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Lat -6.9748, Lng 107.6302</span>
+</div>
+<!-- Static Map Box Container -->
+<div class="relative w-full h-44 rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-location="Open Library Telkom University, Bandung, Indonesia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNiYpApEPwDuS2EOPVeTzWqFR_0MFCm4Byqb3Muq0PwKvBrDOPmsT9Yd-NXphQRw74zIYa7ndP01caruJREja1b1BZytsJ_KuhtdqTRAJpm2PFyRT8kr2pZ7GHLqjnye1dkMxNVe-ivN0u1oKe19kjdhs43r6eBB42RlbTmfqTq8tfIKfXx3qduBEFr_1U9zTbV3Rgs_HSNH18rKqGlqG1QQjxySDmsIw4TrXCYw8')"></div>
+<!-- Tag Lokasi Marker Mengambang -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none">
+<div class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-md whitespace-nowrap">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+<span class="">Titik Temuan: Open Lib Lt. 2</span>
+</div>
+<span class="material-symbols-outlined text-secondary-container text-[28px] -mt-1 drop-shadow" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+<span class="font-body-sm text-body-sm">Area Perpustakaan Pusat Tel-U</span>
+</div>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md hover:bg-surface-container-highest transition-colors" onclick="showNavigationNotice()" type="button">
+<span class="">Petunjuk Arah</span>
+<span class="material-symbols-outlined text-[16px]">near_me</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Informasi Pelapor & Verifikasi -->
+<div class="px-gutter-mobile pt-space-md">
+<div class="bg-surface-container-lowest rounded-lg p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Identitas Pelapor Temuan</span>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-tertiary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-semibold">Skor Reputasi 98%</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative w-12 h-12 rounded-full overflow-hidden bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of a young male Indonesian college student smiling warmly wearing red telkom university campus lanyard ID card badge, studio warm light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE6iEUYzoeJtccMTA5M4CdmOkxAFtoXPMN2CSI7gfp9Yrma3qF-Jr6IdIfpbtVt6WKog42FtvscOFCQa9z6BPf07KTqhdmJmqV6dswXFTKeif-tQ4oTcplsBwwRBCIQmu6E6SS9DTRfH67MHN6saSVLKIevN-cAy9iF96fTtb_4T3NmInnBirsplHTwl4GgvsT5u9CyAg_NI1xEH8ISlg80Dd5v1hI3Ddh9lTRUP0">
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Muhammad Faiz Ghiffari</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Mahasiswa S1 Teknologi Informasi Tel-U</p>
+<span class="inline-block mt-0.5 px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">Penemu Terverifikasi SSO</span>
+</div>
+</div>
+<!-- Aturan Keamanan Privasi B9 / F6 -->
+<div class="bg-surface-container-low rounded p-3 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px] shrink-0 mt-0.5">verified_user</span>
+<div class="min-w-0">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+<strong class="font-semibold text-on-surface">Privasi Terlindungi:</strong> Nomor kontak pelapor dilindungi sesuai protokol FindIt. Koordinasi fisik dilakukan via pos satpam atau verifikasi klaim resmi.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom CTA Bar -->
+<div class="sticky bottom-0 z-40 mt-space-lg w-full bg-surface-container-lowest/95 backdrop-blur-md p-gutter-mobile shadow-[0_-4px_16px_rgba(0,0,0,0.06)] flex flex-col gap-2.5">
+<!-- CTA Utama: Ajukan Klaim (Oranye Terang Sesuai Spesifikasi Brand) -->
+<button class="w-full h-12 rounded-lg bg-secondary-container hover:bg-secondary text-surface-container-lowest font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99]" onclick="openClaimFlow()" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">front_hand</span>
+<span class="">Ajukan Klaim Kepemilikan</span>
+</button>
+<!-- Tombol Baris Kedua: WhatsApp & Poster -->
+<div class="grid grid-cols-2 gap-2">
+<!-- Tombol WhatsApp Resmi Pengembalian -->
+<button class="h-10 rounded-lg bg-surface-container-lowest text-primary-container hover:bg-surface-container font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm transition-colors" onclick="contactHelpdeskWhatsApp()" type="button">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">chat</span>
+<span class="truncate">Tanya Helpdesk</span>
+</button>
+<!-- Tombol Unduh / Bagikan Poster -->
+<button class="h-10 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm transition-colors" onclick="openShareModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span class="truncate">Unduh Poster</span>
+</button>
+</div>
+</div>
+<!-- Modal Interaktif: Poster & QR Code (F9) -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-surface/60 backdrop-blur-sm p-4" id="share-modal">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-lg p-5 shadow-2xl flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[22px]">campaign</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Poster Temuan Kampus</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high" onclick="closeShareModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Preview Kartu Poster Siap Cetak/Sebar -->
+<div class="p-4 bg-surface rounded-lg shadow-sm flex flex-col items-center text-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">FindIt Telkom University</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">DITEMUKAN TUMBLER CORKCICLE</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lantai 2 Open Library Tel-U • 24 Okt 2025</p>
+<!-- QR Code Placeholder Visual SVG -->
+<div class="p-2 bg-surface-container-lowest rounded shadow-sm my-1">
+<svg class="w-28 h-28" fill="currentColor" viewBox="0 0 100 100">
+<path class="text-primary" d="M10 10h30v30h-30z M16 16v18h18v-18z M22 22h6v6h-6z M60 10h30v30h-30z M66 16v18h18v-18z M72 22h6v6h-6z M10 60h30v30h-30z M16 66v18h18v-18z M22 72h6v6h-6z M45 10h10v10h-10z M45 25h10v15h-10z M10 45h10v10h-10z M25 45h20v10h-20z M60 45h15v10h-15z M80 45h10v10h-10z M50 60h10v10h-10z M65 60h25v10h-25z M45 75h10v15h-10z M60 75h15v10h-15z M80 75h10v15h-10z M65 88h15v7h-15z"></path>
+</svg>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Pindai untuk verifikasi &amp; klaim kepemilikan</span>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-full h-10 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm" onclick="triggerDownloadPoster()" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span class="">Unduh Format Gambar (Instagram/Story)</span>
+</button>
+<button class="w-full h-10 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center justify-center gap-1.5" onclick="copyShareLink()" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span class="">Salin Tautan Laporan</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modal Interaktif: Konfirmasi Klaim (B5) -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-surface/60 backdrop-blur-sm p-4" id="claim-modal">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-lg p-5 shadow-2xl flex flex-col gap-3.5">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="text-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ajukan Klaim Kepemilikan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-snug">
+          Untuk menjaga keamanan, Anda akan diminta menjawab pertanyaan verifikasi ciri khusus barang (seperti tanda goresan, isi cairan, atau nomor seri).
+        </p>
+</div>
+<div class="bg-surface-container rounded p-3">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">security</span>
+<span class="">Lokasi Pengambilan Fisik</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Pos Keamanan Utama Gedung Learning Center (Open Library), Lantai 1 Telkom University.
+        </p>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full h-11 rounded-lg bg-secondary-container hover:bg-secondary text-surface-container-lowest font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm" onclick="submitClaimVerification()" type="button">
+<span class="">Lanjutkan ke Form Verifikasi</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full h-9 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md" onclick="closeClaimModal()" type="button">
+          Batal
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentSlide = 0;
+  const totalSlides = 3;
+
+  function updateCarouselUI() {
+    const track = document.getElementById('carousel-track');
+    const counter = document.getElementById('carousel-counter');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    if (track) {
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    if (counter) {
+      counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+    }
+    dots.forEach((dot, idx) => {
+      if (idx === currentSlide) {
+        dot.className = 'carousel-dot w-3 h-2 rounded-full bg-primary-container transition-all';
+      } else {
+        dot.className = 'carousel-dot w-2 h-2 rounded-full bg-surface-container-highest opacity-70 transition-all';
+      }
+    });
+  }
+
+  function moveCarousel(direction) {
+    currentSlide += direction;
+    if (currentSlide < 0) currentSlide = totalSlides - 1;
+    if (currentSlide >= totalSlides) currentSlide = 0;
+    updateCarouselUI();
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toast-notification');
+    const toastText = document.getElementById('toast-text');
+    if (toast && toastText) {
+      toastText.textContent = message;
+      toast.classList.remove('-translate-y-20', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('-translate-y-20', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2600);
+    }
+  }
+
+  function copyShareLink() {
+    const dummyUrl = 'https://findit.telkomuniversity.ac.id/report/LAP-20251025-042';
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(dummyUrl).then(() => {
+        showToast('Tautan laporan tersalin ke clipboard!');
+      }).catch(() => {
+        showToast('Tautan berhasil disalin!');
+      });
+    } else {
+      showToast('Tautan laporan siap dibagikan!');
+    }
+    closeShareModal();
+  }
+
+  function openShareModal() {
+    const modal = document.getElementById('share-modal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
+  function closeShareModal() {
+    const modal = document.getElementById('share-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function openClaimFlow() {
+    const modal = document.getElementById('claim-modal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
+  function closeClaimModal() {
+    const modal = document.getElementById('claim-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function submitClaimVerification() {
+    closeClaimModal();
+    showToast('Membuka Formulir Verifikasi Ciri Barang...');
+  }
+
+  function contactHelpdeskWhatsApp() {
+    showToast('Menghubungkan ke WhatsApp Logistik Kampus...');
+  }
+
+  function triggerDownloadPoster() {
+    showToast('Poster sedang diunduh dalam format gambar!');
+    closeShareModal();
+  }
+
+  function showNavigationNotice() {
+    showToast('Membuka rute ke Lantai 2 Open Library Tel-U...');
+  }
+
+  // Menghubungkan tombol share pada App Shell Header secara dinamis
+  window.addEventListener('DOMContentLoaded', () => {
+    const shellShareBtn = document.querySelector('header button[aria-label="Bagikan Laporan"]');
+    if (shellShareBtn) {
+      shellShareBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openShareModal();
+      });
+    }
+  });
+</script></main>
+
+</body></html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface-variant": "#444651", "on-tertiary-fixed-variant": "#005320", "surface-bright": "#f9f9ff", "surface-container-highest": "#dce2f3", "tertiary": "#003211", "surface-container": "#e7eefe", "surface": "#f9f9ff", "secondary": "#9d4300", "on-secondary-fixed-variant": "#783200", "surface-container-lowest": "#ffffff", "surface-container-high": "#e2e8f8", "tertiary-fixed": "#7ffc97", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "primary-fixed": "#dce1ff", "on-background": "#151c27", "inverse-on-surface": "#ebf1ff", "surface-variant": "#dce2f3", "on-error": "#ffffff", "on-tertiary-container": "#44c365", "surface-tint": "#4059aa", "secondary-fixed-dim": "#ffb690", "background": "#f9f9ff", "on-primary-container": "#90a8ff", "inverse-surface": "#2a313d", "surface-container-low": "#f0f3ff", "tertiary-fixed-dim": "#62df7d", "primary-fixed-dim": "#b6c4ff", "error-container": "#ffdad6", "primary": "#00236f", "on-primary-fixed": "#00164e", "on-surface": "#151c27", "surface-dim": "#d3daea", "secondary-fixed": "#ffdbca", "tertiary-container": "#004b1d", "inverse-primary": "#b6c4ff", "on-tertiary-fixed": "#002109", "on-primary-fixed-variant": "#264191", "primary-container": "#1e3a8a", "on-secondary-container": "#5c2400", "error": "#ba1a1a", "on-secondary": "#ffffff", "outline": "#757682", "outline-variant": "#c5c5d3", "secondary-container": "#fd761a", "on-error-container": "#93000a", "on-secondary-fixed": "#341100" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "margin": "2rem", "space-md": "1rem", "space-xl": "2rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-sm": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "label-md": ["Inter"], "display": ["Inter"], "label-lg": ["Inter"], "body-lg": ["Inter"], "display-mobile": ["Inter"], "label-sm": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "display": ["36px", { "lineHeight": "44px", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Kembali" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container active:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Poster Laporan</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Tutup" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container active:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">close</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full px-gutter-mobile pb-space-xl">
+<!-- Segmented Format Switcher -->
+<section class="w-full pt-space-md pb-space-sm">
+<div class="bg-surface-container-high p-space-xs rounded-xl flex items-center shadow-inner">
+<button aria-pressed="true" class="flex-1 py-space-sm px-space-xs rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs bg-primary-container text-on-primary shadow-sm" id="btn-format-a4" onclick="switchFormat('a4')" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span>A4 (Cetak Fisik)</span>
+</button>
+<button aria-pressed="false" class="flex-1 py-space-sm px-space-xs rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs bg-transparent text-on-surface-variant hover:text-on-surface" id="btn-format-story" onclick="switchFormat('story')" type="button">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+<span>Story (Medsos)</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs px-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="format-hint">
+        Format A4 cocok untuk dicetak di mading fakultas / perpustakaan
+      </p>
+</div>
+</section>
+<!-- Poster Canvas Container -->
+<section class="w-full py-space-sm flex justify-center">
+<!-- Visual Paper Mockup -->
+<article class="w-full max-w-[360px] bg-surface-container-lowest rounded-xl shadow-xl p-space-md flex flex-col transition-all duration-300 relative overflow-hidden" id="poster-wrapper" style="aspect-ratio: 1 / 1.414;">
+<!-- Telkom Campus Official Stamp Strip -->
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[14px]">school</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Telkom University</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">LAP-20251025-042</span>
+</div>
+<!-- Poster Status Badge -->
+<div class="w-full bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-lg py-1.5 px-3 flex items-center justify-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md uppercase tracking-wide font-bold">Ditemukan</span>
+</div>
+<!-- Catchy Poster Headline -->
+<div class="text-center pt-2 pb-1">
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">BARANG TEMUAN KAMPUS</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Apakah ini barang berharga milik Anda?</p>
+</div>
+<!-- Photo Display Card -->
+<div class="w-full bg-surface-container-low rounded-lg overflow-hidden my-space-xs relative shadow-sm">
+<img alt="Tumbler Corkcicle Sage Green 16oz" class="w-full h-44 object-cover" data-alt="A clean studio photo of an authentic sage green 16oz Corkcicle insulated tumbler bottle standing upright on a soft wooden table inside a Telkom University modern library setting, gentle diffused afternoon lighting, clear focus on the bottle, elegant campus background" id="poster-photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFBMmw2EFS7rlDXN333ua488G-6_UV-Zagl2V1mJYpUARh6yKIXHblUB1-c2sVR5nnX5wqKsSoQOC2wVSLxN80DikoN067Ou7GOQBFY5nZM_lk0sUKSBcEiSi8zHO22p8nALQj1mA4fOLYX7hZW_8RAlwC09EuGjo07tZgLzfNDMq35Qj5k8gx-tI3_92eHEaC6FkS0qYX9ddygFYpQ9_SQToyPBEMJEcwn7qCeec"/>
+<div class="absolute bottom-2 right-2 bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface px-2 py-0.5 rounded text-[10px] font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+<span>Foto Fisik Asli</span>
+</div>
+</div>
+<!-- Item Meta Details -->
+<div class="w-full text-center px-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Tumbler Corkcicle Sage Green 16oz</h3>
+</div>
+<!-- Compact Spec Block (PRD Privacy Rule: Only Category, Location, Date) -->
+<div class="w-full bg-surface-container-low rounded-lg p-space-xs my-space-xs space-y-1.5">
+<div class="flex items-center text-start gap-2">
+<div class="w-6 h-6 rounded bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[14px]">category</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="text-[10px] font-label-sm text-on-surface-variant uppercase tracking-wider">Kategori</p>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Barang Pribadi (Botol Minum)</p>
+</div>
+</div>
+<div class="flex items-center text-start gap-2">
+<div class="w-6 h-6 rounded bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[14px]">location_on</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="text-[10px] font-label-sm text-on-surface-variant uppercase tracking-wider">Gedung / Lokasi</p>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Open Library Telkom University (Lt. 2)</p>
+</div>
+</div>
+<div class="flex items-center text-start gap-2">
+<div class="w-6 h-6 rounded bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[14px]">calendar_today</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="text-[10px] font-label-sm text-on-surface-variant uppercase tracking-wider">Waktu Penemuan</p>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface truncate">24 Oktober 2025</p>
+</div>
+</div>
+</div>
+<!-- QR Claim Section -->
+<div class="w-full flex items-center justify-between gap-space-sm bg-surface-container-lowest p-2 rounded-lg mt-auto">
+<!-- Crisp SVG QR Code Placeholder -->
+<div class="w-16 h-16 bg-surface-container-lowest p-1 rounded shrink-0 shadow-sm flex items-center justify-center">
+<svg class="w-full h-full" fill="currentColor" viewbox="0 0 100 100">
+<!-- Finder pattern top-left -->
+<rect class="text-primary" height="28" rx="2" width="28" x="5" y="5"></rect>
+<rect class="text-surface-container-lowest" height="16" width="16" x="11" y="11"></rect>
+<rect class="text-primary" height="8" width="8" x="15" y="15"></rect>
+<!-- Finder pattern top-right -->
+<rect class="text-primary" height="28" rx="2" width="28" x="67" y="5"></rect>
+<rect class="text-surface-container-lowest" height="16" width="16" x="73" y="11"></rect>
+<rect class="text-primary" height="8" width="8" x="77" y="15"></rect>
+<!-- Finder pattern bottom-left -->
+<rect class="text-primary" height="28" rx="2" width="28" x="5" y="67"></rect>
+<rect class="text-surface-container-lowest" height="16" width="16" x="11" y="73"></rect>
+<rect class="text-primary" height="8" width="8" x="15" y="77"></rect>
+<!-- Body data modules -->
+<rect class="text-primary" height="7" width="7" x="42" y="10"></rect>
+<rect class="text-primary" height="7" width="7" x="52" y="18"></rect>
+<rect class="text-primary" height="7" width="7" x="42" y="26"></rect>
+<rect class="text-primary" height="7" width="7" x="12" y="42"></rect>
+<rect class="text-primary" height="7" width="7" x="22" y="48"></rect>
+<rect class="text-primary" height="8" width="8" x="38" y="40"></rect>
+<rect class="text-primary" height="8" width="8" x="50" y="48"></rect>
+<rect class="text-primary" height="6" width="6" x="68" y="42"></rect>
+<rect class="text-primary" height="7" width="7" x="78" y="52"></rect>
+<rect class="text-primary" height="7" width="7" x="88" y="40"></rect>
+<rect class="text-primary" height="7" width="7" x="42" y="66"></rect>
+<rect class="text-primary" height="7" width="7" x="52" y="76"></rect>
+<rect class="text-primary" height="8" width="8" x="66" y="66"></rect>
+<rect class="text-primary" height="8" width="8" x="82" y="72"></rect>
+<rect class="text-primary" height="7" width="7" x="72" y="84"></rect>
+<rect class="text-primary" height="7" width="7" x="42" y="86"></rect>
+</svg>
+</div>
+<div class="flex-1 min-w-0 text-start">
+<p class="font-label-md text-label-md text-on-surface font-bold leading-tight">Pindai untuk melihat laporan &amp; ajukan klaim</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">findit.telkomuniversity.ac.id/l/LAP-20251025-042</p>
+</div>
+</div>
+<!-- Poster Footer Signature -->
+<div class="w-full pt-space-xs mt-1 flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary-container text-[16px]">travel_explore</span>
+<span class="font-headline-sm text-[13px] font-bold text-primary tracking-tight">FindIt Campus</span>
+</div>
+<span class="text-[10px] font-label-sm text-on-surface-variant font-medium">Portal Resmi Telkom University</span>
+</div>
+</article>
+</section>
+<!-- Privacy Security Information Box -->
+<section class="w-full my-space-sm">
+<div class="bg-surface-container p-space-md rounded-xl flex items-start gap-space-sm shadow-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Privasi Terlindungi</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-relaxed">
+          Sesuai aturan kampus, identitas pelapor dan nomor kontak tidak dicantumkan pada poster untuk mencegah penipuan &amp; kontak palsu.
+        </p>
+</div>
+</div>
+</section>
+<!-- Primary & Secondary Action Buttons -->
+<section class="w-full pt-space-xs pb-space-sm flex flex-col gap-space-sm">
+<button class="w-full py-3 px-space-md rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs transition-all shadow-md active:scale-[0.99] bg-secondary-container text-on-surface hover:brightness-105" onclick="triggerDownload()" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span id="download-text">Unduh Poster (Format A4)</span>
+</button>
+<button class="w-full py-3 px-space-md rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs transition-all shadow-sm bg-surface-container-lowest text-primary hover:bg-surface-container-low active:scale-[0.99]" onclick="triggerPrint()" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+<span>Cetak Poster Langsung</span>
+</button>
+</section>
+<!-- Toast Notification Feedback -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-full font-label-md text-label-md shadow-2xl flex items-center gap-space-xs opacity-0 pointer-events-none transition-opacity duration-300 z-50" id="action-toast">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check_circle</span>
+<span id="toast-text">Poster siap diunduh!</span>
+</div>
+</div>
+<script>
+  let currentFormat = 'a4';
+
+  function switchFormat(mode) {
+    currentFormat = mode;
+    const btnA4 = document.getElementById('btn-format-a4');
+    const btnStory = document.getElementById('btn-format-story');
+    const wrapper = document.getElementById('poster-wrapper');
+    const photo = document.getElementById('poster-photo');
+    const hint = document.getElementById('format-hint');
+    const dlText = document.getElementById('download-text');
+
+    if (mode === 'story') {
+      // Button states
+      btnA4.className = 'flex-1 py-space-sm px-space-xs rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs bg-transparent text-on-surface-variant hover:text-on-surface';
+      btnA4.setAttribute('aria-pressed', 'false');
+      btnStory.className = 'flex-1 py-space-sm px-space-xs rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs bg-primary-container text-on-primary shadow-sm';
+      btnStory.setAttribute('aria-pressed', 'true');
+
+      // Poster aspect ratio styling
+      wrapper.style.aspectRatio = '9 / 16';
+      wrapper.classList.remove('max-w-[360px]');
+      wrapper.classList.add('max-w-[310px]');
+      photo.classList.remove('h-44');
+      photo.classList.add('h-56');
+
+      hint.textContent = 'Format Story 9:16 ideal untuk WhatsApp Status & Instagram Story';
+      dlText.textContent = 'Unduh Poster (Format Story)';
+      showToast('Beralih ke format Story 1080x1920');
+    } else {
+      // Button states
+      btnStory.className = 'flex-1 py-space-sm px-space-xs rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs bg-transparent text-on-surface-variant hover:text-on-surface';
+      btnStory.setAttribute('aria-pressed', 'false');
+      btnA4.className = 'flex-1 py-space-sm px-space-xs rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs bg-primary-container text-on-primary shadow-sm';
+      btnA4.setAttribute('aria-pressed', 'true');
+
+      // Poster aspect ratio styling
+      wrapper.style.aspectRatio = '1 / 1.414';
+      wrapper.classList.remove('max-w-[310px]');
+      wrapper.classList.add('max-w-[360px]');
+      photo.classList.remove('h-56');
+      photo.classList.add('h-44');
+
+      hint.textContent = 'Format A4 cocok untuk dicetak di mading fakultas / perpustakaan';
+      dlText.textContent = 'Unduh Poster (Format A4)';
+      showToast('Beralih ke format A4 Cetak');
+    }
+  }
+
+  function triggerDownload() {
+    showToast('Mengunduh poster resolusi tinggi HD...');
+  }
+
+  function triggerPrint() {
+    showToast('Menyiapkan tata letak cetak A4...');
+    setTimeout(() => {
+      window.print();
+    }, 400);
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('action-toast');
+    const toastText = document.getElementById('toast-text');
+    toastText.textContent = message;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2400);
+  }
+</script></main></body></html>

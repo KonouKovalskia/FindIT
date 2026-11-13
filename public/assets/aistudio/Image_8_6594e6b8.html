@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-fixed-variant": "#005320", "on-error": "#ffffff", "on-surface-variant": "#444651", "on-primary-container": "#90a8ff", "primary-fixed-dim": "#b6c4ff", "on-tertiary": "#ffffff", "surface-bright": "#f9f9ff", "secondary-container": "#fd761a", "primary-container": "#1e3a8a", "tertiary": "#003211", "on-tertiary-fixed": "#002109", "on-tertiary-container": "#44c365", "on-secondary-fixed": "#341100", "background": "#f9f9ff", "outline-variant": "#c5c5d3", "inverse-on-surface": "#ebf1ff", "on-secondary-container": "#5c2400", "on-background": "#151c27", "surface-container": "#e7eefe", "surface": "#f9f9ff", "primary-fixed": "#dce1ff", "surface-dim": "#d3daea", "surface-container-high": "#e2e8f8", "on-primary": "#ffffff", "secondary": "#9d4300", "on-primary-fixed": "#00164e", "outline": "#757682", "tertiary-fixed-dim": "#62df7d", "surface-container-lowest": "#ffffff", "tertiary-container": "#004b1d", "secondary-fixed": "#ffdbca", "on-surface": "#151c27", "error": "#ba1a1a", "on-error-container": "#93000a", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#783200", "surface-container-low": "#f0f3ff", "secondary-fixed-dim": "#ffb690", "primary": "#00236f", "surface-container-highest": "#dce2f3", "on-primary-fixed-variant": "#264191", "on-secondary": "#ffffff", "surface-tint": "#4059aa", "inverse-primary": "#b6c4ff", "inverse-surface": "#2a313d", "surface-variant": "#dce2f3", "tertiary-fixed": "#7ffc97" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-md": "1rem", "margin": "2rem" }, fontFamily: { "headline-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "display-mobile": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "label-lg": ["Inter"], "body-md": ["Inter"], "display": ["Inter"] }, fontSize: { "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", fontWeight: "500" }], "headline-lg": ["30px", { lineHeight: "38px", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "display-mobile": ["28px", { lineHeight: "36px", fontWeight: "700" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "display": ["36px", { lineHeight: "44px", fontWeight: "700" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-11 h-11 rounded-lg bg-primary-container flex items-center justify-center text-white relative shadow-sm"><span class="material-symbols-outlined text-[20px]">search</span><span class="material-symbols-outlined text-[14px] text-secondary-container absolute -bottom-1 -right-1">location_on</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">FindIt</span><span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Campus</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Beranda</span></div></div><div class="flex items-center gap-space-xs"><a class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors" data-path="laporan-saya" href="#"><span class="material-symbols-outlined">notifications</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full min-h-screen pt-16 pb-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Sub-Header Title & Info -->
+<section class="px-margin-mobile pt-space-md pb-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Laporan Saya</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Kelola laporan barang hilang &amp; temuan Anda</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+</div>
+<!-- Toggle Sub-Tipe (Segmented Pill) -->
+<div class="mt-space-md p-1 bg-surface-container-high rounded-xl flex items-center shadow-inner">
+<button class="flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1.5" id="btn-tab-laporan" onclick="switchMainTab('laporan')">
+<span class="material-symbols-outlined text-[16px]">folder_shared</span>
+<span>Laporan Saya</span>
+<span class="px-1.5 py-0.2 bg-primary/10 text-primary rounded-full text-label-sm font-label-sm">3</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5" id="btn-tab-klaim" onclick="switchMainTab('klaim')">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Klaim Saya</span>
+<span class="px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-label-sm font-label-sm">1</span>
+</button>
+</div>
+<!-- Horizontal Status Chips Bar -->
+<div class="mt-space-md -mx-margin-mobile px-margin-mobile flex gap-2 overflow-x-auto no-scrollbar pb-1">
+<button class="status-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary shadow-sm transition-all" onclick="filterStatus('aktif', this)">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="font-label-md text-label-md">Aktif</span>
+<span class="w-5 h-5 rounded-full bg-on-primary/20 text-on-primary font-label-sm text-label-sm flex items-center justify-center ml-0.5">2</span>
+</button>
+<button class="status-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" onclick="filterStatus('diklaim', this)">
+<span class="material-symbols-outlined text-[16px] text-secondary">handshake</span>
+<span class="font-label-md text-label-md">Diklaim</span>
+<span class="w-5 h-5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm flex items-center justify-center ml-0.5">1</span>
+</button>
+<button class="status-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" onclick="filterStatus('selesai', this)">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">task_alt</span>
+<span class="font-label-md text-label-md">Selesai</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center ml-0.5">3</span>
+</button>
+<button class="status-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all" onclick="filterStatus('arsip', this)">
+<span class="material-symbols-outlined text-[16px] text-outline">archive</span>
+<span class="font-label-md text-label-md">Arsip</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center ml-0.5">1</span>
+</button>
+</div>
+</section>
+<!-- Campus Policy Quick Announcement Banner -->
+<section class="px-margin-mobile mt-space-xs">
+<div class="bg-surface-container-low rounded-lg p-3.5 flex items-start gap-3 shadow-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">info</span>
+</div>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-primary font-bold">Aturan Masa Aktif Laporan (B4)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Laporan aktif selama 30 hari. Lakukan perpanjangan jika barang belum ditemukan agar tetap tampil pada radar Peta Kampus.</p>
+</div>
+</div>
+</section>
+<!-- Items Feed List -->
+<section class="px-margin-mobile mt-space-md flex flex-col gap-4 pb-20">
+<!-- KARTU 1: Tumbler Corkcicle (Ditemukan - Aktif) -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200 hover:shadow-md">
+<!-- Media Header with Floating Badges -->
+<div class="relative w-full h-44 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A modern sage green Corkcicle tumbler bottle standing on a clean campus library wooden table with soft sunlight background, highly realistic, minimalist Telkom University vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxzp86At-6dtQ0sE9g149AspMbXpLAH0QlN-DloC8CGQVIucxHHs7aTToOYn1_TK3WjbcYl_XBzGoDybh6qlYRQXEYEmq7uaS-bjiY0SPIvCdwhgqw1jy7po1BNNOJEfZfy-rftNwwXJn2cPcv_exwF3TyISMdWXSY4igCqql_FljG6IeAOTvf-uO7vQ1NypBnOaIKCqJYsHNHDTwHopM2ObnfM8IszTXGKC9aDkk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20"></div>
+<!-- Left status pill badge -->
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm shadow-sm backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Ditemukan</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[13px]">published_with_changes</span>
+<span>Aktif</span>
+</span>
+</div>
+<!-- Right days counter badge -->
+<div class="absolute top-3 right-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">timer</span>
+<span>12 hari tersisa</span>
+</span>
+</div>
+<!-- Footnote inside photo -->
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center text-white text-body-sm font-body-sm drop-shadow">
+<span class="material-symbols-outlined text-[16px] mr-1 text-secondary-container">place</span>
+<span class="truncate">Open Library Telkom University • 24 Okt 2025</span>
+</div>
+</div>
+<!-- Card Content Body -->
+<div class="p-4 flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">Tumbler Corkcicle Sage Green 16oz</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ditemukan di meja baca lantai 2 dekat rak referensi sains.</p>
+</div>
+</div>
+<!-- Pending Claim Alert Notice -->
+<div class="p-2.5 rounded-lg bg-surface-container-high flex items-center gap-2.5">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></div>
+<p class="font-label-md text-label-md text-primary font-medium flex-1">1 klaim baru diajukan • Menunggu verifikasi admin</p>
+<span class="material-symbols-outlined text-[18px] text-primary">chevron_right</span>
+</div>
+<!-- Expandable Timeline Micro-Interaction -->
+<div class="bg-surface-container-low rounded-lg p-3">
+<button class="w-full flex items-center justify-between text-left" onclick="toggleTimeline('timeline-1')">
+<span class="font-label-md text-label-md text-primary font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">history</span>
+              Riwayat Penanganan
+            </span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant transition-transform" id="timeline-icon-1">expand_less</span>
+</button>
+<div class="mt-3 flex flex-col gap-3 pl-2 transition-all" id="timeline-1">
+<!-- Timeline Item 1 -->
+<div class="relative pl-5 before:content-[''] before:absolute before:left-1 before:top-2 before:bottom-[-16px] before:w-0.5 before:bg-surface-variant">
+<div class="absolute left-0 top-1 w-2.5 h-2.5 rounded-full bg-tertiary-container shadow-sm"></div>
+<p class="font-label-sm text-label-sm text-on-surface font-medium">Laporan Dibuat (oleh Anda)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">24 Okt 2025 • 14:35 WIB</p>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative pl-5 before:content-[''] before:absolute before:left-1 before:top-2 before:bottom-[-16px] before:w-0.5 before:bg-surface-variant">
+<div class="absolute left-0 top-1 w-2.5 h-2.5 rounded-full bg-primary shadow-sm"></div>
+<p class="font-label-sm text-label-sm text-on-surface font-medium">Terverifikasi Sistem Kampus (Status Aktif)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">24 Okt 2025 • 14:36 WIB</p>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative pl-5">
+<div class="absolute left-0 top-1 w-2.5 h-2.5 rounded-full bg-secondary shadow-sm"></div>
+<p class="font-label-sm text-label-sm text-on-surface font-semibold text-secondary">Klaim Diajukan oleh Raka</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">25 Okt 2025 • 09:12 WIB • Menunggu admin</p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>Ubah</span>
+</button>
+<button class="flex-1 h-10 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-colors" onclick="extendReport(this, 'Tumbler Corkcicle')">
+<span class="material-symbols-outlined text-[18px]">update</span>
+<span>Perpanjang (+30)</span>
+</button>
+</div>
+</div>
+</article>
+<!-- KARTU 2: Kunci Motor Honda Vario (Hilang - Siap Serah Terima) -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200 hover:shadow-md">
+<!-- Media Header -->
+<div class="relative w-full h-44 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A black Honda motorcycle smart key and mechanical key on a branded red Telkom University lanyard tag resting on an outdoor concrete bench, crisp contrast, morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN9y-G5AhZl3zNT2Nw_e0mfnLs69gklyD8IAs8yZs7fXUuHc-Le5Dx_ti9bq6zVLdZvJAcwiHrERkk70Ogzc7C-1tgooqZunR4aOt2uRMWelE9_U8zNGjcefOIWs0dwLIPKmjjqKmfhiV6p0WlkRXIDKY5THXhrn6XuEe0twIES_y4_2whJsG9kD9bSqdZ5aSiY1E_fUXK2tuHOhvFURqGP8v8C4VQOwRFyQwqtLw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20"></div>
+<!-- Badges -->
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>Hilang</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm shadow-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">handshake</span>
+<span>Diklaim</span>
+</span>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center text-white text-body-sm font-body-sm drop-shadow">
+<span class="material-symbols-outlined text-[16px] mr-1 text-secondary-container">place</span>
+<span class="truncate">Parkiran Gedung Cacuk Lt. 1 • 23 Okt 2025</span>
+</div>
+</div>
+<!-- Card Body -->
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">Kunci Motor Honda Vario Hitam</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Gantungan dompet STNK merah bertuliskan Telkom University &amp; gantungan robot mini.</p>
+</div>
+<!-- Resolution Ready Callout -->
+<div class="p-3 rounded-lg bg-secondary-fixed/50 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[20px] text-secondary mt-0.5">verified_user</span>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-on-secondary-fixed font-bold leading-tight">Siap Serah Terima!</p>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant mt-0.5 text-[12px]">Klaim oleh <strong>Faiz Ghiffari (1301213042)</strong> telah disetujui Admin Ruang Logistik.</p>
+</div>
+</div>
+<!-- Action Buttons (CTA Oranye Sesuai Panduan B6) -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full h-11 px-4 rounded-lg bg-secondary-container hover:bg-secondary text-white font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-colors active:scale-[0.98]" onclick="confirmHandover(this)">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+<span>Konfirmasi Serah Terima</span>
+</button>
+<a class="w-full h-10 px-4 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" href="https://wa.me/" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">chat</span>
+<span>Hubungi Faiz via WhatsApp</span>
+</a>
+</div>
+</div>
+</article>
+<!-- KARTU 3: Earphone TWS (Hilang - Kritis Kedaluwarsa 3 Hari) -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200 hover:shadow-md">
+<!-- Media Header -->
+<div class="relative w-full h-44 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="White Anker Soundcore wireless earbuds charging case placed on a university lecture desk with notebook beside it, daylight indoors, sharp product focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaF2SdOLD1HGYbOb2KI_ndH57IRoMpUGd1_cg8TrY5IuIbjNFiRaya4OIkZwYiFlJLsVlBVz04SWhG7iI1k6heOIakCKstsirO6DgHd4xmiLxunta0nfWOiWZW7xcme6Q_m4xKh23jW2bnN3LSQFk6ywsn2N5_GXmeN1lCeTpmJSBPsIhP59xtswU4v-GAPei8pth9dd1T87i3sVHlx83aWCWHvnd7p38MgO4nq-8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20"></div>
+<!-- Badges -->
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>Hilang</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[13px]">radar</span>
+<span>Aktif</span>
+</span>
+</div>
+<!-- Urgency Warning Badge -->
+<div class="absolute top-3 right-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error text-on-error font-label-sm text-label-sm shadow-sm animate-bounce">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>3 hari lagi ditutup</span>
+</span>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center text-white text-body-sm font-body-sm drop-shadow">
+<span class="material-symbols-outlined text-[16px] mr-1 text-secondary-container">place</span>
+<span class="truncate">Gedung Kuliah Bersama (GKB) R.304 • 28 Sep 2025</span>
+</div>
+</div>
+<!-- Card Body -->
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">Earphone TWS Anker Soundcore R50i Putih</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Tertinggal di laci meja baris ketiga seusai kuliah Kalkulus Lanjut.</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-high flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-error">alarm</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Masa tayang tersisa <strong>3 hari</strong> sebelum otomatis dipindahkan ke Arsip Kedaluwarsa.</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>Ubah</span>
+</button>
+<button class="flex-1 h-10 px-3 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-sm transition-colors active:scale-95" onclick="extendReport(this, 'TWS Anker')">
+<span class="material-symbols-outlined text-[18px]">autorenew</span>
+<span>Perpanjang (+30)</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- Floating Quick Action Button: Tambah Laporan Baru -->
+<div class="fixed right-4 bottom-20 z-40">
+<button class="h-12 px-4 rounded-full bg-secondary-container hover:bg-secondary text-white font-label-lg text-label-lg shadow-lg flex items-center gap-2 transition-transform duration-150 active:scale-90" onclick="quickNewReport()">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span class="pr-1">Buat Laporan</span>
+</button>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 opacity-0 pointer-events-none translate-y-3" id="toast">
+<div class="px-4 py-2.5 rounded-xl bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed" id="toast-icon">check_circle</span>
+<span id="toast-text">Laporan berhasil diperpanjang 30 hari!</span>
+</div>
+</div>
+</div>
+<script>
+  function switchMainTab(type) {
+    const btnLaporan = document.getElementById('btn-tab-laporan');
+    const btnKlaim = document.getElementById('btn-tab-klaim');
+    if (type === 'laporan') {
+      btnLaporan.className = 'flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1.5';
+      btnKlaim.className = 'flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5';
+      showToast('Menampilkan seluruh Laporan Anda (3)', 'folder_shared');
+    } else {
+      btnKlaim.className = 'flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1.5';
+      btnLaporan.className = 'flex-1 py-2 px-3 rounded-lg text-center font-label-md text-label-md transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5';
+      showToast('Menampilkan Klaim Diajukan Anda (1)', 'verified');
+    }
+  }
+
+  function filterStatus(status, el) {
+    const chips = document.querySelectorAll('.status-chip');
+    chips.forEach(c => {
+      c.className = 'status-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all';
+    });
+    el.className = 'status-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary shadow-sm transition-all';
+    showToast(`Memfilter laporan: ${status.toUpperCase()}`, 'filter_alt');
+  }
+
+  function toggleTimeline(id) {
+    const el = document.getElementById(id);
+    const icon = document.getElementById('timeline-icon-1');
+    if (el.classList.contains('hidden')) {
+      el.classList.remove('hidden');
+      icon.innerText = 'expand_less';
+    } else {
+      el.classList.add('hidden');
+      icon.innerText = 'expand_more';
+    }
+  }
+
+  function extendReport(btn, itemName) {
+    btn.disabled = true;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[16px] animate-spin">progress_activity</span><span>Memproses...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px] text-tertiary-container">done_all</span><span>Diperpanjang</span>`;
+      btn.classList.remove('bg-primary', 'text-on-primary');
+      btn.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      showToast(`${itemName} diperpanjang +30 hari (Aturan B4)`, 'check_circle');
+    }, 600);
+  }
+
+  function confirmHandover(btn) {
+    btn.disabled = true;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">sync</span><span>Menyelesaikan...</span>`;
+    setTimeout(() => {
+      btn.className = "w-full h-11 px-4 rounded-lg bg-tertiary-container text-white font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm";
+      btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">task_alt</span><span>Selesai & Diserahkan!</span>`;
+      showToast("Serah terima berhasil diverifikasi. Laporan dipindahkan ke Selesai.", 'verified');
+    }, 700);
+  }
+
+  function quickNewReport() {
+    showToast("Membuka formulir pelaporan barang baru...", 'add_circle');
+  }
+
+  function showToast(text, icon = 'info') {
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+    toastText.innerText = text;
+    toastIcon.innerText = icon;
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+      toast.classList.remove('opacity-100', 'translate-y-0');
+    }, 2500);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="h-16 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] px-space-xs py-1 text-on-surface-variant transition-colors" data-path="beranda" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm mt-0.5">Beranda</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] px-space-xs py-1 text-on-surface-variant transition-colors" data-path="peta" href="#"><span class="material-symbols-outlined text-[22px]">map</span><span class="font-label-sm text-label-sm mt-0.5">Peta</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] px-space-xs py-1 text-on-surface-variant transition-colors" data-path="laporan-saya" href="#"><span class="material-symbols-outlined text-[22px]">assignment</span><span class="font-label-sm text-label-sm mt-0.5">Laporan Saya</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] px-space-xs py-1 text-on-surface-variant transition-colors" data-path="profil" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-sm text-label-sm mt-0.5">Profil</span></a></div></nav>
+</body></html>
